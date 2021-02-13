@@ -3,10 +3,10 @@ using System.Globalization;
 
 namespace SmartCOPDrinks
 {
-    public class Beer : Drink
+    class Beer : Drink
     {
-        public double AlcoholContent;
-        public bool IsDraft;
+        protected double AlcoholContent;
+        protected bool IsDraft;
         public Beer() : base()
         {
             this.Name = "Budweiser";
@@ -44,7 +44,7 @@ namespace SmartCOPDrinks
             this.Title = this.Title.ToUpper();
         }
 
-        public override void Description()
+        internal override void Description()
         {
             if (this.IsDraft)
             {

@@ -3,7 +3,7 @@ using System.Globalization;
 
 namespace SmartCOPDrinks
 {
-    public class Soda : Drink
+    class Soda : Drink
     {
         public Soda() : base()
         {
@@ -12,7 +12,7 @@ namespace SmartCOPDrinks
             this.Title = this.Name.ToUpper();
         }
 
-        public Soda(string sodaName, bool carbonation, bool hasALid, int tempFahrenheit) : base(sodaName, carbonation, hasALid, tempFahrenheit)
+        public Soda(string sodaName, bool carbonation, bool hasALid, int tempFahrenheit)
         {
             this.Name = sodaName;
             this.IsCarbonated = carbonation;

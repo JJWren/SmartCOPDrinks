@@ -3,9 +3,9 @@ using System.Globalization;
 
 namespace SmartCOPDrinks
 {
-    public class Juice : Drink
+    class Juice : Drink
     {
-        public string Fruit;
+        protected string Fruit;
         public Juice() : base()
         {
             this.Fruit = "orange";
@@ -33,7 +33,7 @@ namespace SmartCOPDrinks
             this.Title = this.Title.ToUpper();
         }
 
-        public override void Description()
+        internal override void Description()
         {
             // doesn't account for strange user input
             // grape and banana => grape and bananas | No plurality for 'grape'

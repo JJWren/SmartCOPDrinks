@@ -3,17 +3,17 @@ using System.Globalization;
 
 namespace SmartCOPDrinks
 {
-    public class Drink
+    abstract class Drink
     {
         // Fields
-        public string Name;
-        public bool IsCarbonated;
+        protected string Name;
+        protected bool IsCarbonated;
         public bool HasLid;
-        public int Temperature;
-        public string Title;
+        protected int Temperature;
+        protected string Title;
 
         // Constructor with default values
-        public Drink()
+        protected Drink()
         {
             this.Name = "water";
             this.IsCarbonated = false;
@@ -22,19 +22,9 @@ namespace SmartCOPDrinks
             this.Title = this.Name.ToUpper();
         }
 
-        // Constructor with custom values
-        public Drink(string drinkName, bool carbonation, bool hasALid, int tempFahrenheit)
-        {
-            this.Name = drinkName;
-            this.IsCarbonated = carbonation;
-            this.HasLid = hasALid;
-            this.Temperature = tempFahrenheit;
-            this.Title = this.Name.ToUpper();
-        }
-
         // Method: Gives description of drink
         // 'virtual' allows for override on subclasses of 'Drink'
-        public virtual void Description()
+        internal virtual void Description()
         {
             Console.Write($"\n{this.Title}: ");
 

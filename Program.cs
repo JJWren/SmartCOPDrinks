@@ -11,11 +11,9 @@ namespace SmartCOPDrinks
             // Create list of drink instances
             List<Drink> drinks = new List<Drink>()
             {
-                new Drink(),
                 new Soda(),
                 new Beer(),
                 new Juice(),
-                new Drink("Arnold Palmer", false, false, 60),
                 new Soda("Sprite", true, true, 38),
                 new Beer("Yuengling", true, 4.4, false, 32),
                 new Juice("grape", true, false, 212)
